@@ -1,6 +1,16 @@
 #include <iostream>
 using namespace std;
 
+void func(int arg[1]) {
+	arg[0]++;
+	cout << arg[0] << endl;
+}
+
+void sizefunc(int arg[4]) {
+	arg[0]++;
+	cout << sizeof(arg) << endl;//사이즈는 8이 리턴됨 int arg[4] -> int *arg가 됨 내부적으로 불필요한 복사를 막기 위함
+}
+
 void main() {
 
 	int a[5];
@@ -57,4 +67,18 @@ void main() {
 	int** pp2 = arrM;
 	cout << pp2[1][1]<< endl;
 	//배열은 함수의 인자로 넣어도 call by pointer라 원본값이 변경됨
+
+	int i[1] = { 1 };
+	int a1[4] = { 1,2,3,4 };
+	cout << i[0] << endl;
+	func(i);
+	cout << i[0] << endl;//call by pointer라 2가 출력됨
+	sizefunc(a1);
+
+	//주소가 넘어가면 배열을 함수에서도 잘 쓸수있다.
+
+	int sizearr[2][3] = { {0} };
+	cout << sizeof(sizearr) << endl;
+	cout << sizeof(sizearr[0]) << endl;
+	cout << sizeof(sizearr[0][0]) << endl;
 }

@@ -1,0 +1,10 @@
+﻿  chapterseven.cpp
+C:\Workspace\SNA\oop\Solution1\ChapterSeven\chapterseven.cpp(27,2): error C2665: 'func2': 모든 인수 형식을 변환할 수 있는 오버로드된 함수가 없습니다.
+C:\Workspace\SNA\oop\Solution1\ChapterSeven\chapterseven.cpp(10,6): message : 'void func2(const char *)'일 수 있습니다.
+C:\Workspace\SNA\oop\Solution1\ChapterSeven\chapterseven.cpp(27,2): message : 'void func2(const char *)': 인수 1을(를) 'char'에서 'const char *'(으)로 변환할 수 없습니다.
+C:\Workspace\SNA\oop\Solution1\ChapterSeven\chapterseven.cpp(27,8): message : 정수 계열 형식에서 포인터 형식으로 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+C:\Workspace\SNA\oop\Solution1\ChapterSeven\chapterseven.cpp(7,6): message : 또는       'void func2(char *)'
+C:\Workspace\SNA\oop\Solution1\ChapterSeven\chapterseven.cpp(27,2): message : 'void func2(char *)': 인수 1을(를) 'char'에서 'char *'(으)로 변환할 수 없습니다.
+C:\Workspace\SNA\oop\Solution1\ChapterSeven\chapterseven.cpp(27,8): message : 정수 계열 형식에서 포인터 형식으로 변환하려면 reinterpret_cast, C 스타일 캐스트 또는 괄호가 있는 함수 스타일 캐스트가 필요합니다.
+C:\Workspace\SNA\oop\Solution1\ChapterSeven\chapterseven.cpp(27,2): message : 인수 목록 '(char)'을(를) 일치시키는 동안
+C:\Workspace\SNA\oop\Solution1\ChapterSeven\chapterseven.cpp(34,13): error C2040: 'b': 'const int *'의 간접 참조 수준이 'char'과(와) 다릅니다.
