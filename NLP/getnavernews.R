@@ -104,9 +104,9 @@ getNaverNews <- function()
                             ncnt<-1
                             options(warn=-1)
                             test<-tryCatch(eval(parse(text=paste0("readLines('http://news.naver.com/main/list.nhn?sid2=269&sid1=100&mid=shm&mode=LS2D&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
-                            if(grepl("Read error",test))
+                            if(any(grepl("Read error",test)))
                                 {
-                                    while(ncnt>3)
+                                    while(ncnt<=3)
                                         {
                                             Sys.sleep(1)
                                             test<-tryCatch(eval(parse(text=paste0("readLines('http://news.naver.com/main/list.nhn?sid2=269&sid1=100&mid=shm&mode=LS2D&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
@@ -180,9 +180,9 @@ getNaverNews <- function()
 
                             options(warn=-1)
                             test<-tryCatch(eval(parse(text=paste0("readLines('http://news.naver.com/main/list.nhn?sid2=263&sid1=101&mid=shm&mode=LS2D&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
-                            if(grepl("Read error",test))
+                            if(any(grepl("Read error",test)))
                                 {
-                                    while(ncnt>3)
+                                    while(ncnt<=3)
                                         {
                                             Sys.sleep(1)
                                             test<-tryCatch(eval(parse(text=paste0("readLines('http://news.naver.com/main/list.nhn?sid2=263&sid1=101&mid=shm&mode=LS2D&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
@@ -256,9 +256,9 @@ getNaverNews <- function()
 
                             options(warn=-1)
                             test<-tryCatch(eval(parse(text=paste0("readLines('http://news.naver.com/main/list.nhn?sid2=257&sid1=102&mid=shm&mode=LS2D&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
-                            if(grepl("Read error",test))
+                            if(any(grepl("Read error",test)))
                                 {
-                                    while(ncnt>3)
+                                    while(ncnt<=3)
                                         {
                                             Sys.sleep(1)
                                             test<-tryCatch(eval(parse(text=paste0("readLines('http://news.naver.com/main/list.nhn?sid2=257&sid1=102&mid=shm&mode=LS2D&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
@@ -332,9 +332,9 @@ getNaverNews <- function()
 
                             options(warn=-1)
                             test<-tryCatch(eval(parse(text=paste0("readLines('http://news.naver.com/main/list.nhn?sid2=245&sid1=103&mid=shm&mode=LS2D&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
-                            if(grepl("Read error",test))
+                            if(any(grepl("Read error",test)))
                                 {
-                                    while(ncnt>3)
+                                    while(ncnt<=3)
                                         {
                                             Sys.sleep(1)
                                             test<-tryCatch(eval(parse(text=paste0("readLines('http://news.naver.com/main/list.nhn?sid2=245&sid1=103&mid=shm&mode=LS2D&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
@@ -408,9 +408,9 @@ getNaverNews <- function()
 
                             options(warn=-1)
                             test<-tryCatch(eval(parse(text=paste0("readLines('http://news.naver.com/main/list.nhn?sid2=322&sid1=104&mid=shm&mode=LS2D&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
-                            if(grepl("Read error",test))
+                            if(any(grepl("Read error",test)))
                                 {
-                                    while(ncnt>3)
+                                    while(ncnt<=3)
                                         {
                                             Sys.sleep(1)
                                             test<-tryCatch(eval(parse(text=paste0("readLines('http://news.naver.com/main/list.nhn?sid2=322&sid1=104&mid=shm&mode=LS2D&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
@@ -484,9 +484,9 @@ getNaverNews <- function()
 
                             options(warn=-1)
                             test<-tryCatch(eval(parse(text=paste0("readLines('http://news.naver.com/main/list.nhn?sid2=228&sid1=105&mid=shm&mode=LS2D&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
-                            if(grepl("Read error",test))
+                            if(any(grepl("Read error",test)))
                                 {
-                                    while(ncnt>3)
+                                    while(ncnt<=3)
                                         {
                                             Sys.sleep(1)
                                             test<-tryCatch(eval(parse(text=paste0("readLines('http://news.naver.com/main/list.nhn?sid2=228&sid1=105&mid=shm&mode=LS2D&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
@@ -560,9 +560,9 @@ if(selectIT==1)
 
                             options(warn=-1)
                             test<-tryCatch(eval(parse(text=paste0("readLines('http://news.naver.com/main/list.nhn?sid2=230&sid1=105&mid=shm&mode=LS2D&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
-                            if(grepl("Read error",test))
+                            if(any(grepl("Read error",test)))
                                 {
-                                    while(ncnt>3)
+                                    while(ncnt<=3)
                                         {
                                             Sys.sleep(1)
                                             test<-tryCatch(eval(parse(text=paste0("readLines('http://news.naver.com/main/list.nhn?sid2=230&sid1=105&mid=shm&mode=LS2D&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
@@ -638,9 +638,9 @@ if(selectIT==1)
 
                             options(warn=-1)
                             test<-tryCatch(eval(parse(text=paste0("readLines('http://sports.news.naver.com/sports/index.nhn?category=sports_general&ctg=news&mod=lst&type=news&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
-                            if(grepl("Read error",test))
+                            if(any(grepl("Read error",test)))
                                 {
-                                    while(ncnt>3)
+                                    while(ncnt<=3)
                                         {
                                             Sys.sleep(1)
                                             test<-tryCatch(eval(parse(text=paste0("readLines('http://sports.news.naver.com/sports/index.nhn?category=sports_general&ctg=news&mod=lst&type=news&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
@@ -693,9 +693,9 @@ if(selectIT==1)
 
                             options(warn=-1)
                             test<-tryCatch(eval(parse(text=paste0("readLines('http://entertain.naver.com/home/mainNews?date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
-                            if(grepl("Read error",test))
+                            if(any(grepl("Read error",test)))
                                 {
-                                    while(ncnt>3)
+                                    while(ncnt<=3)
                                         {
                                             Sys.sleep(1)
                                             test<-tryCatch(eval(parse(text=paste0("readLines('http://entertain.naver.com/home/mainNews?date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
@@ -741,9 +741,9 @@ if(selectIT==1)
                     ncnt<-1
                     options(warn=-1)
                     test<-tryCatch(eval(parse(text=paste0("readLines('http://weather.naver.com/news/wetrNewsList.nhn?ymd=",kk,"',warn=F,encoding='UTF-8')"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
-                    if(grepl("Read error",test))
+                    if(any(grepl("Read error",test)))
                         {
-                            while(ncnt>3)
+                            while(ncnt<=3)
                                 {
                                     Sys.sleep(1)
                                     test<-tryCatch(eval(parse(text=paste0("readLines('http://weather.naver.com/news/wetrNewsList.nhn?ymd=",kk,"',warn=F,,encoding='UTF-8')"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
@@ -801,9 +801,9 @@ if(selectIT==1)
                                     options(warn=-1)
 
                                     test<-tryCatch(eval(parse(text=paste0("readLines('http://finance.naver.com/news/news_list.nhn?mode=LSS3D&section_id=101&section_id2=258&section_id3=",fnum,"&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
-                                    if(grepl("Read error",test))
+                                    if(any(grepl("Read error",test)))
                                         {
-                                            while(ncnt>3)
+                                            while(ncnt<=3)
                                                 {
                                                     Sys.sleep(1)
                                                     test<-tryCatch(eval(parse(text=paste0("readLines('http://finance.naver.com/news/news_list.nhn?mode=LSS3D&section_id=101&section_id2=258&section_id3=",fnum,"&date=",kk,"&page=",i,"',warn=F)"))),  error = function(e) print("Read error, Please wait. It will be start after 1 sec."))
