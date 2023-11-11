@@ -1,4 +1,7 @@
 setwd("C:/Workspace/SNA/NLP")
+getwd()
+source("getnavernews.R",encoding="UTF-8")
+
 install.packages("rvest")
 library(rvest)
 url <- "https://www.data.go.kr/tcs/dss/selectDataSetList.do"
@@ -17,4 +20,4 @@ title <- gsub("[|\r|\n|\t]", "", title)
 title
 api <- data.frame(title, desc)
 api
-source("getnavernews.R",encoding="UTF-8")
+

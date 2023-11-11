@@ -26,7 +26,7 @@ getNaverNews <- function()
         {
             endDate <- as.Date(readline(prompt="Please ;) enter end date(yyyy-mm-dd): "))
         }
-# end while1
+# end while
     while(startDate>endDate)
         {
             endDate <- as.Date(readline(prompt="Please ;) enter end date later than start date(yyyy-mm-dd): "))
