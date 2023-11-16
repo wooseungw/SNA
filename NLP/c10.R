@@ -4,6 +4,8 @@ install.packages("N2H4", repos = "https://forkonlp.r-universe.dev")
 
 source('https://install-github.me/forkonlp/N2H4')
 library(N2H4)
+library(httr)
+library(rvest)
 # 메인 카테고리 id 가져옵니다.
 cate<-getMainCategory()
 print(cate)
@@ -41,7 +43,7 @@ for (date in strDate:endDate){
       # 뉴스 리스트 페이지의 url을 sid1, sid2, date로 생성합니다.
       #                https://news.naver.com/main/list.naver?mode=LS2D&mid=shm&sid2=732&sid1=105&date=20231110
       #                https://news.naver.com/main/list.naver?mode=LS2D&mid=shm&sid1=105&sid2=283
-      pageUrl<- paste0("https://news.naver.com/main/list.naver?mode=LS2D&mid=shm&sid1=",sid1,"&sid2=",sid2,"&date=",date)
+      pageUrl<- paste0("https://news.naver.com/main/list.naver?mode=LS2D&mid=shm&sid2",sid2,"&sid1=",sid1,"&date=",date)
       # 리스트 페이지의 마지막 페이지수를 가져옵니다.
       max<-getMaxPageNum(pageUrl)
       
@@ -49,7 +51,7 @@ for (date in strDate:endDate){
         print(paste0(date," / ",sid1," / ",sid2," / ",pageNum, " / start Time: ", strTime," / spent Time: ", Sys.time()-midTime," / spent Time at first: ", Sys.time()-strTime))
         midTime<-Sys.time()
         # 페이지넘버를 포함한 뉴스 리스트 페이지의 url을 생성합니다.
-        pageUrl<-paste0("https://news.naver.com/main/list.naver?mode=LS2D&mid=shm&sid1=",sid1,"&sid2=",sid2,"&date=",date,"&page=",pageNum)
+        pageUrl<-paste0("https://news.naver.com/main/list.naver?mode=LS2D&mid=shm&sid2",sid2,"&sid1=",sid1,"&date=",date,"&page=",pageNum)
         # 뉴스 리스트 페이지 내의 개별 네이버 뉴스 url들을 가져옵니다.
         newsList<-getUrlList(pageUrl)
         newsData<-c()
@@ -87,53 +89,7 @@ for (date in strDate:endDate){
   }
 }
 print("Process end")
-for (date in strDate:endDate) {
-  for (sid1 in tcate) {
-    for (sid2 in tscate) {
-      
-      midTime <- Sys.time()  # 중간 시간 초기화
-      print(paste0(date, " / ", sid1, " / ", sid2, " / start Time: ", strTime, " / spent Time: ", Sys.time() - midTime, " / spent Time at first: ", Sys.time() - strTime))
-      
-      pageUrl <- paste0("http://news.naver.com/main/list.nhn?sid2=", sid2, "&sid1=", sid1, "&mid=shm&mode=LS2D&date=", date)
-      max <- getMaxPageNum(pageUrl)
-      
-      newsData <- data.frame()  # 전체 뉴스 데이터를 저장할 데이터 프레임 초기화
 
-      for (pageNum in 1:max) {
-        midTime <- Sys.time()  # 페이지별 중간 시간 초기화
-        print(paste0(date, " / ", sid1, " / ", sid2, " / ", pageNum, " / start Time: ", strTime, " / spent Time: ", Sys.time() - midTime, " / spent Time at first: ", Sys.time() - strTime))
-        
-        pageUrl <- paste0("http://news.naver.com/main/list.nhn?sid2=", sid2, "&sid1=", sid1, "&mid=shm&mode=LS2D&date=", date, "&page=", pageNum)
-        newsList <- getUrlList(pageUrl)
-        
-        for (newslink in newsList$links) {
-            tryi <- 0  # 시도 횟수 초기화
-            tem <- try(getContent(newslink), silent = TRUE)
-            while (tryi <= 5 && any(class(tem) == "try-error")) {
-                Sys.sleep(1)  # 재시도 전에 잠시 대기
-                tem <- try(getContent(newslink), silent = TRUE)
-                tryi <- tryi + 1
-                print(paste0("try again: ", newslink))
-            }
-            if (is.list(tem) && "datetime" %in% names(tem) && class(tem$datetime)[1] == "POSIXct") {
-                newsData <- rbind(newsData, tem)
-            }
-            }
-
-
-        # 데이터 저장
-        save_path <- getwd()  # 저장 경로 설정
-        dir.create(save_path, showWarnings = FALSE)
-        file_path <- paste0(save_path, "/news", sid1, "_", sid2, "_", date, "_", pageNum, ".csv")
-        write.csv(newsData, file = file_path, row.names = FALSE)
-      }
-    }
-  }
-}
-
-
-library(httr)
-library(rvest)
 source("getnavernews.R",encoding="UTF-8")
 install.packages("rvest")
 
@@ -141,7 +97,7 @@ url <- "https://www.data.go.kr/tcs/dss/selectDataSetList.do"
 html <- read_html(url)
 html
 #목록의 아이템 추출 #이 목록의 위치 .title추출
-title <- html_nodes(html, "#apiDataList .title") %>%
+title <- html_nodes(html, "#apiDataList .title") %>% 
 html_text()
 title
 
