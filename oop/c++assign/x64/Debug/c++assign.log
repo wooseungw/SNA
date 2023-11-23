@@ -1,2 +1,3 @@
-﻿  c++assign.cpp
+﻿  소스.cpp
+C:\Workspace\SNA\oop\c++assign\소스.cpp(27,19): warning C4552: '<': 식의 결과가 사용되지 않습니다.
   c++assign.vcxproj -> C:\Workspace\SNA\oop\c++assign\x64\Debug\c++assign.exe

@@ -6,9 +6,9 @@ df <- read.csv('C:/Workspace/SNA/NLP/prerpeoceed_attetion.csv')
 #install.packages('wordcloud')
 #install.packages('topicmodels')
 #install.packages('LDAvis')
-library(LDAvis)
-library(tm)
+#library(LDAvis)
 library(wordcloud)
+library(tm)
 library(topicmodels)
 library(RColorBrewer)
 library(ggplot2)
@@ -36,8 +36,10 @@ word_freqs <- data.frame(word = names(word_freqs), freq = word_freqs)
 # 색상 팔레트 생성
 palette <- c(brewer.pal(8, "Dark2"), brewer.pal(4, "Set3"))
 # 가장 많이 사용된 단어 시각화
-wordcloud(words = word_freqs$word, freq = word_freqs$freq, min.freq = 3, max.words = 300, scale = c(3.9, 0.9), random.order = FALSE,colors = palette)
 
+png("wordcloud.png", width = 800, height = 600)
+wordcloud(words = word_freqs$word, freq = word_freqs$freq, min.freq = 3, max.words = 300, scale = c(3.9, 0.9), random.order = FALSE,colors = palette)
+dev.off()
 print("Done")
 # 주제 모델링 (예: LDA)
 # LDA 모델 생성
@@ -75,6 +77,8 @@ serVis(lda_vis_data, out.dir = 'LDAvis', open.browser = TRUE)
 #   coord_flip() +
 #   labs(x = "Terms", y = "Words", title = "Top Words in Each LDA Topic")
 # print("Done")
+
+
 
 
 
