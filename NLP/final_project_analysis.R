@@ -7,6 +7,7 @@ df <- read.csv('C:/Workspace/SNA/NLP/prerpeoceed_attetion.csv')
 #install.packages('topicmodels')
 #install.packages('LDAvis')
 #install.packages('treemapify')
+#install.packages('cli')
 library(treemapify)
 library(wordcloud)
 library(tm)
@@ -87,7 +88,7 @@ print("Word Cloud Created")
 #corpus2 <- tm_map(corpus, removeWords, c("data","deep","image","vision")) resnet
 #corpus2 <- tm_map(corpus, removeWords, c("image","deep")) GAN
 # 어텐션
-corpus2 <- tm_map(corpus, removeWords, c("language","image","vision"))
+corpus2 <- tm_map(corpus, removeWords, c("image","vision"))
 print(paste("Corpus size after removeWords:", length(corpus)))
 # 코퍼스를 데이터 프레임으로 변환
 text_data <- sapply(corpus2, as.character)
