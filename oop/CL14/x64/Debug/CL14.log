@@ -1,0 +1,12 @@
+﻿  template.cpp
+C:\Workspace\SNA\oop\CL14\template.cpp(78,22): warning C4305: '인수': 'double'에서 'T'(으)로 잘립니다.
+          with
+          [
+              T=float
+          ]
+C:\Workspace\SNA\oop\CL14\template.cpp(78,17): warning C4305: '인수': 'double'에서 'T'(으)로 잘립니다.
+          with
+          [
+              T=float
+          ]
+  CL14.vcxproj -> C:\Workspace\SNA\oop\CL14\x64\Debug\CL14.exe
