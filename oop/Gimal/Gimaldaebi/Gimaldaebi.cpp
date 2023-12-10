@@ -15,7 +15,7 @@ public:
         cout << x << ", " << y << endl;
     }//생성자
     ~Point() {
-        cout << "소멸자";
+        cout << "소멸자\n";
     }
     int GetX() const {
         return x;
@@ -25,6 +25,9 @@ public:
     }
     
     Point operator+(Point a);
+    Point operator*(float b) {
+        return Point(x * b, y * b);
+    }
     
 };
 
@@ -51,9 +54,7 @@ Point::Point(): x(0),y(0) {
 Point Point::operator+(Point a) {
     return Point(a.GetX() + x, a.GetY() + y);
 }
-Point operator*(Point a, float b) {
-    return Point(a.GetX() * b, a.GetY() * b);
-}
+
 void MakeSqaure:: PrintSqaurefix(int width, int height) {
     for (int i = 0; i < width; i++)
         cout << "-";
@@ -74,16 +75,16 @@ void MakeSqaure:: PrintSqaurefix(int width, int height) {
 int main()
 {
     Point* p = new Point(12, 54);
-    Point* p0 = new Point();
-
+    Point p0(1, 2);
     Point c(0, 0);
-    c = p->operator+(*p0);
-    cout << c.GetX()<< " " << c.GetY() << endl;
+    c = p->operator+(p0);
+    cout << "C의 X:" << c.GetX() << "C의 Y:" << c.GetY() << endl;
     MakeSqaure ms = MakeSqaure(10,10);
     ms.PrintSqaurefix(10,10);
-    c = p * 3;
+    c = p ->operator*(2);
+    //cout << "C의 X:" << c.GetX() << "C의 Y:" << c.GetY() << endl;
     std::cout << "Hello World!\n";
 
     delete p;
-    delete p0;
+    
 }
