@@ -32,6 +32,7 @@ public:
 };
 
 
+
 class MakeSqaure : Point{
 private:
     int width;
@@ -51,29 +52,51 @@ public:
 Point::Point(): x(0),y(0) {
     cout << x << ", " << y << endl;
 }
+
 Point Point::operator+(Point a) {
     return Point(a.GetX() + x, a.GetY() + y);
 }
 
-void MakeSqaure:: PrintSqaurefix(int width, int height) {
+void MakeSqaure::PrintSqaurefix(int width, int height) {
     for (int i = 0; i < width; i++)
         cout << "-";
     cout << endl;
-    for (int i = 0; i < height; i++){
+    for (int i = 0; i < height; i++) {
         cout << '|';
-        for (int j = 0; j < width-2; j++)
+        for (int j = 0; j < width - 2; j++)
             cout << " ";
-        cout << '|'<<endl;
+        cout << '|' << endl;
     }
     for (int i = 0; i < width; i++)
         cout << "-";
     cout << endl;
-    
+
+};
+template<class T>
+class Message {
+public:
+    Message(int sendTime, string sendName, T contents) :sendTime(sendTime),sendName(sendName),contents(contents) {
+    }
+    int GetTime() { return sendTime; }
+    string GetName() { return sendName; }
+    T GetContents() { return contents; }
+private:
+    int sendTime;
+    string sendName;
+    T contents;
+};
+template<class T>
+void swap(T &a, T &b) {
+    T temp;
+    temp = b;
+    b = a;
+    a = b;
 }
-
-
 int main()
 {
+    
+    Message<string>* m = new Message<string>(12, "NA", "Hi");
+    cout << m->GetTime() << m->GetName() << m->GetContents() << endl;
     Point* p = new Point(12, 54);
     Point p0(1, 2);
     Point c(0, 0);
