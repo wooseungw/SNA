@@ -1,6 +1,4 @@
 from typing import Any
-
-
 class Queue:
     def __init__(self, size):
         self.size = size
@@ -45,24 +43,33 @@ class Queue:
         return data
     
     def calTime(self):
+        f = (self.front+1) % self.size
+        r = (self.rear+1) % self.size
         if (self.isEmpty()):
             return 0
         timeSum = 0
-        if self.isFull():
-            for i in range((self.front+1) % self.size, self.size):
+        if r < f:
+            for i in range(0, r):
+                timeSum += self.queue[i][1]
+            for i in range(f,(self.size)):
                 timeSum += self.queue[i][1]
         else:
-            for i in range((self.front+1) % self.size, (self.rear+1) % self.size) :
+            for i in range(f, r) :
                 timeSum += self.queue[i][1]
         return timeSum
+
 if __name__ =="__main__":
-    waitCall = [(9, 9), ('고장', 3), ('환불', 4), ('환불', 4), ('고장', 3), ('환불', 4)]
+    # 대기열 큐의 길이보다 많은 콜이 있고 중간에 첫번째 콜이 처리되는 경우
+    waitCall = [('고장', 3), ('환불', 4), ('환불', 4), ('고장', 3), ('환불', 4), ('사용', 9)]
     SIZE = 6
     q = Queue(SIZE)
-
+    i = 0
     for call in waitCall:
+        i += 1
         print("귀하의 대기 예상시간은 ", q.calTime(), "분입니다.")
         print("현재 대기 콜 --> ", q)
+        if i == 3:
+            q.deQueue()
         q.enQueue(call)
         print()
     print("최종 대기 시간 --> ",q.calTime(),"분")
