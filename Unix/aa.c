@@ -1,27 +1,25 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <signal.h>
+jump1.c
 
-void alarmHandler(int signo);
-
-/* 알람 시그널을 처리한다. */
+void  p1(), p2();
+jmp_buf env;
 int main()
 {
-    int sec = 0;
-
-    signal(SIGALRM, alarmHandler);
-    alarm(5);                   /* 알람 시간 5초 설정 */
-    printf("무한 루프\n");
-    while (1) {
-        sleep(1);
-        printf("%d초 경과\n", ++sec);
+    if (setjmp(env) == 1) {
+        printf("오류로 인해 복귀: main()\n");
+        exit(0);
     }
-    printf("실행되지 않음\n");
+    else printf("처음 통과: main()\n");
+    p1();
 }
+void p1()
+    p2();
 
-void alarmHandler(int signo)
+void p2() 
 {
-    printf("일어나세요.\n");
-    exit(0);
+    int error = 1;
+
+    if (error) {
+        printf("p2()에서 오류\n");
+        longjmp(env, 1);
+    }
 }
