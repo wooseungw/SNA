@@ -1,0 +1,87 @@
+2024-10-21T11:07:29.673+09:00  INFO 43566 --- [week5] [main] com.example.midexam.MidexamApplication   : Starting MidexamApplication using Java 23 with PID 43566 (/Users/seungwoo/Workspace/SNA/Webprogramming/midexam/build/classes/java/main started by seungwoo in /Users/seungwoo/Workspace/SNA/Webprogramming/midexam)
+2024-10-21T11:07:29.678+09:00  INFO 43566 --- [week5] [main] com.example.midexam.MidexamApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-10-21T11:07:29.973+09:00  INFO 43566 --- [week5] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-21T11:07:29.994+09:00  INFO 43566 --- [week5] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interface.
+2024-10-21T11:07:30.172+09:00  INFO 43566 --- [week5] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-21T11:07:30.177+09:00  INFO 43566 --- [week5] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-21T11:07:30.177+09:00  INFO 43566 --- [week5] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-21T11:07:30.201+09:00  INFO 43566 --- [week5] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-21T11:07:30.201+09:00  INFO 43566 --- [week5] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 473 ms
+2024-10-21T11:07:30.220+09:00  INFO 43566 --- [week5] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-21T11:07:30.289+09:00  INFO 43566 --- [week5] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-10-21T11:07:30.290+09:00  INFO 43566 --- [week5] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-21T11:07:30.297+09:00  INFO 43566 --- [week5] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-21T11:07:30.367+09:00  INFO 43566 --- [week5] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-21T11:07:30.388+09:00  INFO 43566 --- [week5] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-21T11:07:30.403+09:00  INFO 43566 --- [week5] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-21T11:07:30.500+09:00  INFO 43566 --- [week5] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-21T11:07:30.789+09:00  INFO 43566 --- [week5] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-21T11:07:30.802+09:00  INFO 43566 --- [week5] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-21T11:07:30.911+09:00  INFO 43566 --- [week5] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-21T11:07:31.125+09:00  WARN 43566 --- [week5] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-21T11:07:31.244+09:00  INFO 43566 --- [week5] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-10-21T11:07:31.248+09:00  INFO 43566 --- [week5] [main] com.example.midexam.MidexamApplication   : Started MidexamApplication in 1.73 seconds (process running for 1.9)
+2024-10-21T11:07:39.235+09:00  INFO 43566 --- [week5] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-21T11:07:39.236+09:00  INFO 43566 --- [week5] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-21T11:07:39.237+09:00  INFO 43566 --- [week5] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-21T11:08:08.074+09:00  INFO 43566 --- [week5] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-21T11:08:08.076+09:00  INFO 43566 --- [week5] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-21T11:08:08.077+09:00  INFO 43566 --- [week5] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-21T11:08:09.089+09:00  INFO 44123 --- [week5] [main] com.example.midexam.MidexamApplication   : Starting MidexamApplication using Java 23 with PID 44123 (/Users/seungwoo/Workspace/SNA/Webprogramming/midexam/build/classes/java/main started by seungwoo in /Users/seungwoo/Workspace/SNA/Webprogramming/midexam)
+2024-10-21T11:08:09.090+09:00  INFO 44123 --- [week5] [main] com.example.midexam.MidexamApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-10-21T11:08:09.376+09:00  INFO 44123 --- [week5] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-21T11:08:09.396+09:00  INFO 44123 --- [week5] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interface.
+2024-10-21T11:08:09.570+09:00  INFO 44123 --- [week5] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-21T11:08:09.575+09:00  INFO 44123 --- [week5] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-21T11:08:09.575+09:00  INFO 44123 --- [week5] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-21T11:08:09.596+09:00  INFO 44123 --- [week5] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-21T11:08:09.596+09:00  INFO 44123 --- [week5] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 462 ms
+2024-10-21T11:08:09.609+09:00  INFO 44123 --- [week5] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-21T11:08:09.677+09:00  INFO 44123 --- [week5] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-10-21T11:08:09.677+09:00  INFO 44123 --- [week5] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-21T11:08:09.683+09:00  INFO 44123 --- [week5] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-21T11:08:09.742+09:00  INFO 44123 --- [week5] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-21T11:08:09.762+09:00  INFO 44123 --- [week5] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-21T11:08:09.777+09:00  INFO 44123 --- [week5] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-21T11:08:09.896+09:00  INFO 44123 --- [week5] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-21T11:08:10.186+09:00  INFO 44123 --- [week5] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-21T11:08:10.198+09:00  INFO 44123 --- [week5] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-21T11:08:10.309+09:00  INFO 44123 --- [week5] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-21T11:08:10.549+09:00  WARN 44123 --- [week5] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-21T11:08:10.665+09:00  INFO 44123 --- [week5] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-10-21T11:08:10.669+09:00  INFO 44123 --- [week5] [main] com.example.midexam.MidexamApplication   : Started MidexamApplication in 1.739 seconds (process running for 1.889)
+2024-10-21T11:08:12.849+09:00  INFO 44123 --- [week5] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-21T11:08:12.849+09:00  INFO 44123 --- [week5] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-21T11:08:12.850+09:00  INFO 44123 --- [week5] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-21T11:08:37.455+09:00  INFO 44123 --- [week5] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-21T11:08:37.460+09:00  INFO 44123 --- [week5] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-21T11:08:37.461+09:00  INFO 44123 --- [week5] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-10-21T11:08:38.421+09:00  INFO 44549 --- [week5] [main] com.example.midexam.MidexamApplication   : Starting MidexamApplication using Java 23 with PID 44549 (/Users/seungwoo/Workspace/SNA/Webprogramming/midexam/build/classes/java/main started by seungwoo in /Users/seungwoo/Workspace/SNA/Webprogramming/midexam)
+2024-10-21T11:08:38.422+09:00  INFO 44549 --- [week5] [main] com.example.midexam.MidexamApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-10-21T11:08:38.663+09:00  INFO 44549 --- [week5] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-21T11:08:38.681+09:00  INFO 44549 --- [week5] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interface.
+2024-10-21T11:08:38.856+09:00  INFO 44549 --- [week5] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-10-21T11:08:38.861+09:00  INFO 44549 --- [week5] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-10-21T11:08:38.861+09:00  INFO 44549 --- [week5] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-21T11:08:38.884+09:00  INFO 44549 --- [week5] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-10-21T11:08:38.884+09:00  INFO 44549 --- [week5] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 435 ms
+2024-10-21T11:08:38.895+09:00  INFO 44549 --- [week5] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-10-21T11:08:38.955+09:00  INFO 44549 --- [week5] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-10-21T11:08:38.955+09:00  INFO 44549 --- [week5] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-10-21T11:08:38.961+09:00  INFO 44549 --- [week5] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-10-21T11:08:39.024+09:00  INFO 44549 --- [week5] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-21T11:08:39.043+09:00  INFO 44549 --- [week5] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-21T11:08:39.057+09:00  INFO 44549 --- [week5] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-10-21T11:08:39.161+09:00  INFO 44549 --- [week5] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-21T11:08:39.438+09:00  INFO 44549 --- [week5] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-21T11:08:39.451+09:00  INFO 44549 --- [week5] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-21T11:08:39.552+09:00  INFO 44549 --- [week5] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-10-21T11:08:39.763+09:00  WARN 44549 --- [week5] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-21T11:08:39.873+09:00  INFO 44549 --- [week5] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-10-21T11:08:39.877+09:00  INFO 44549 --- [week5] [main] com.example.midexam.MidexamApplication   : Started MidexamApplication in 1.609 seconds (process running for 1.758)
+2024-10-21T11:08:46.042+09:00  INFO 44549 --- [week5] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-21T11:08:46.043+09:00  INFO 44549 --- [week5] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-10-21T11:08:46.044+09:00  INFO 44549 --- [week5] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-10-21T11:08:53.801+09:00  INFO 44549 --- [week5] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-21T11:08:53.808+09:00  INFO 44549 --- [week5] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-10-21T11:08:53.813+09:00  INFO 44549 --- [week5] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

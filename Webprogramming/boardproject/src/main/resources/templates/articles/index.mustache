@@ -1,0 +1,24 @@
+{{>layouts/header}}
+
+<br>
+<a href="articles/new" class="btn btn-primary"> 새글 쓰기</a>
+<table class="table">
+    <thead>
+        <tr>
+            <!--scope="col"은 th요소가 열 전체에 대해 헤더역할을 한다는 뜻-->
+            <th scope="col">Id</th><th scope="col">Title</th><th scope="col">Content</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#articleList}}
+        <tr>
+            <th>{{id}}</th>
+            <td><a href="articles/{{id}}">{{title}}</a></td>
+            <td>{{content}}</td>
+        </tr>
+        {{/articleList}}
+    </tbody>
+</table>
+
+
+{{>layouts/footer}}

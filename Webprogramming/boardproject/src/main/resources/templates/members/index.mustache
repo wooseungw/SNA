@@ -1,0 +1,20 @@
+{{>layouts/header}}
+
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <!--scope="col"은 th요소가 열 전체에 대해 헤더역할을 한다는 뜻-->
+            <th scope="col">Email</th><th scope="col">Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#memberList}}
+        <tr>
+            <td>{{email}}</td><td>{{password}}</td>
+        </tr>
+        {{/memberList}}
+    </tbody>
+</table>
+
+{{>layouts/footer}}

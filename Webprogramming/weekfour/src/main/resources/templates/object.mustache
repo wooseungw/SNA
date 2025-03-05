@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustache Template</title>
+</head>
+<body style="text-align: center;">
+    {{#isAdmin}}
+        <h1>Welcome Admin</h1>
+        <p>Admin</p>
+        
+        <h2>People</h2>
+        {{#people}}
+            <p>{{getName}} | {{getAge}} | {{getJob}}</p>
+        {{/people}}
+
+        <h2>Fruits</h2>
+        
+        <p>| {{#fruits}}{{.}} | {{/fruits}}</p>
+        
+    {{/isAdmin}}
+    {{^isAdmin}}
+        <h1>Welcome User</h1>
+        <p>Not Admin</p>
+    {{/isAdmin}}
+</body>
+</html>

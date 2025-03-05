@@ -1,0 +1,19 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MemberList</title>
+</head>
+<body>
+
+<h2>Member List</h2>
+<hr>
+<ul>
+    {{#members}}
+        <li> id: {{id}} | name: {{name}} | email: {{email}} | age: {{age}} | userId: {{userId}} </li>
+    {{/members}}
+</ul>
+</body>
+</html>

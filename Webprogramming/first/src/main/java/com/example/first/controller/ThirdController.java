@@ -1,25 +1,43 @@
 package com.example.first.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class ThirdController {
-    int cnt = 0;
-    @GetMapping("/count3")
+
+    //hello username
+    @GetMapping("/users/{username}")
     @ResponseBody
-    public String count3(Model model) {
-        cnt ++;
-        String countString = Integer.toString(cnt);
-        String OutputString = "";
-        for (int i = 0; i < countString.length(); i++) {
-            String str = String.format("<h1>"+countString.charAt(i)+"</h1>");
-            //String str = String.format("<img src = 'img/number/%c.png' alt='%c' width = '100' height='100'>", countString.charAt(i));
-            OutputString = OutputString + str;
-        }
-        
-        return OutputString;
+    public String getUserInfo(@PathVariable String username){
+
+        return "hello, " + username + "!";
+    }
+
+    @GetMapping("/sum/{number}")
+    @ResponseBody
+    public String sum(@PathVariable("number") int number) {
+        long sum = 0;
+        for(int i = 0; i < number; i++ ) sum += (i+1);
+
+        String html = "<h1>1에서 " + number + "까지의 수의 합은 " + sum + "입니다.</h1>";
+        return html;
+    }
+
+    //users/kim/orders/500
+    @GetMapping("/users/{username}/orders/{orderNo}")
+    @ResponseBody
+    public String getOrder(@PathVariable String username, @PathVariable int orderNo) {
+        return "User Name: " + username + ", Order No: " + orderNo ;
+    }
+
+    //"Category: technology, Post ID: 123"
+    //posts/technology/123
+    @GetMapping("/posts/{category}/{postId}")
+    @ResponseBody
+    public String getPostDetails(@PathVariable String category, @PathVariable int postId){
+        return "Category: " + category + ", Post Id: " + postId;
     }
 }
