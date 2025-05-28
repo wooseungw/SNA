@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-INIT_X = 300
+INIT_X = 50
 INIT_Y = 60
 
 def make_view(name, img, x, y, put_text=""):
@@ -35,7 +35,8 @@ def show(image_path="./a2.jpeg"):
 
     # 3) 그레이→weight 계산 (adaptive)
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY).astype(np.float32)
-    gray = cv2.log(gray + 1.0)
+    # gray = cv2.log(gray + 1.0)
+    
     gray = cv2.normalize(gray, None, 0, 255, cv2.NORM_MINMAX)
     l_norm = gray / 255.0
     weight = (1.0 - l_norm)[..., np.newaxis]  # shape=(H,W,1)
@@ -75,7 +76,7 @@ def show(image_path="./a2.jpeg"):
         make_view("Log Transform",   logf.astype(np.uint8), INIT_X,          INIT_Y + H + 10, log_ms)
         make_view("Better",          better,             INIT_X + W, INIT_Y,         better_ms)
         make_view("Adaptive Better", adaptive,           INIT_X + W, INIT_Y + H + 10, adaptive_better_ms)
-
+        make_view("weight map", cv2.normalize(weight, None,0,255,cv2.NORM_MINMAX).astype(np.uint8), INIT_X + 2*W, INIT_Y + H + 10)
         # 9) 키 이벤트 처리
         key = cv2.waitKey(30) & 0xFF
         # print("key:", key)
@@ -96,6 +97,7 @@ if __name__ == "__main__":
         "./a.png",
         "./a2.jpeg",
         "./a3.jpeg",
+        "./a4.png"
     ]
     for img in img_list:
         show(img)
