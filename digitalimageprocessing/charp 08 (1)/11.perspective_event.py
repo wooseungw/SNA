@@ -30,7 +30,7 @@ def onMouse(event, x, y, flags, param):
         draw_rect(np.copy(image))
         warp(np.copy(image))
 
-image = cv2.imread('images/perspective2.jpg')
+image = cv2.imread('images/translate.jpg')
 if image is None: raise Exception("영상 파일을 읽기 에러")
 
 small = np.array((12, 12))                                    # 좌표 사각형 크기

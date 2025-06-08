@@ -77,7 +77,7 @@ def show(image_path="./a2.jpeg"):
         make_view("Better",          better,             INIT_X + W, INIT_Y,         better_ms)
         make_view("Adaptive Better", adaptive,           INIT_X + W, INIT_Y + H + 10, adaptive_better_ms)
         make_view("weight map", cv2.normalize(weight, None,0,255,cv2.NORM_MINMAX).astype(np.uint8), INIT_X + 2*W, INIT_Y + H + 10)
-        # 9) 키 이벤트 처리
+        # 9) 키 이벤트 처리ㅌ
         key = cv2.waitKey(30) & 0xFF
         # print("key:", key)
         if int(key) == 27:      # 종료

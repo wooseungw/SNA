@@ -19,7 +19,7 @@ def affine_transform(img, mat):
 
     return dst
 
-image = cv2.imread('images/affine.jpg', cv2.IMREAD_GRAYSCALE)
+image = cv2.imread('images/affine_test1.jpg', cv2.IMREAD_GRAYSCALE)
 if image is None: raise Exception("영상 파일을 읽기 에러")
 
 center = (200, 200)                                 # 회전 변환 기준 좌표
